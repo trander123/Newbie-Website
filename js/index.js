@@ -23,12 +23,12 @@ navToggle.addEventListener("click", () => {
 const blogsList = [
   {
     title: "Title 1",
-    author: "Author 1",
+    author: "James Smith",
     description: "Description 1"
   },
   {
     title: "Title 2",
-    author: "Author 2",
+    author: "John Doe",
     description: "Description 2"
   }
 ]
@@ -39,9 +39,14 @@ const blogs = document.querySelector(".blogs-container")
 let content = blogs.innerHTML;
 console.log(blogs.innerHTML)
 blogsList.forEach(list => content += `
-  <h1>${list.title}</h1>
-  <h2>${list.author}</h2>
-  <h3>${list.description}</h3>
+  <div class="card">
+    <div class="card-pic">
+      <img src="img/card.jpg" alt="Card" class="card-img">
+    </div>
+    <h2 class="card-title">${list.title}</h2>
+    <p class="card-author">${list.author}</p>
+    <input class="btn" type="button" value="Show">
+  </div>
 `)
 blogs.innerHTML = `${content}`;
 
