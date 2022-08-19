@@ -50,6 +50,21 @@ img {
   display: block;
 }
 /* Styling element*/
+.icons-container {
+  margin-top: 1em;
+}
+
+.icon:hover {
+  opacity: .5;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: var(--clr-light);
+  padding: .3em;
+  font-size: var(--fs-h3);
+}
+
 .card-author {
   margin: .8em 0;
   opacity: .5;
@@ -65,7 +80,6 @@ img {
   padding: 1em;
   background: var(--clr-container);
   border-radius: 5px;
-  margin: 2em;
   display: inline-block;
   text-align: center;
 }
@@ -103,7 +117,7 @@ img {
 }
 
 .title {
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
 }
 .logo {
   cursor: pointer;
@@ -184,7 +198,7 @@ footer p {
 
 .content-container{
   margin: 0 auto 0;
-  padding: 5em 2em;
+  padding: 2em 2em 5em;
 }
 
 .form-container form{

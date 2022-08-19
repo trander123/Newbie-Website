@@ -37,7 +37,7 @@ const btn = document.querySelector(".btn")
 const blogs = document.querySelector(".blogs-container")
 
 let content = blogs.innerHTML;
-console.log(blogs.innerHTML)
+console.log(content)
 blogsList.forEach(list => content += `
   <div class="card">
     <div class="card-pic">
@@ -48,5 +48,6 @@ blogsList.forEach(list => content += `
     <input class="btn" type="button" value="Show">
   </div>
 `)
-blogs.innerHTML = `${content}`;
 
+blogs.innerHTML = `${content}`;
+console.log(content)

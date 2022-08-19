@@ -1,2 +1,7 @@
 Work on about me HTML and CSS
 Work on designing the blogs
+
+add more stylings on blogs-container
+
+currently designing the footer links cya tomorrow self.
+Alright im here self lets continue designing the footer brother
