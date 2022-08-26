@@ -53,9 +53,30 @@ img {
   display: block;
 }
 /* Styling element*/
+.background-div {
+  padding: 1em;
+}
+
+.skill-div {
+  background: var(--clr-container);
+  padding: 1em;
+}
+
+.info-div {
+  background: var(--clr-accent);
+  padding: 1em;
+}
+
+.list-subtitle {
+  background: var(--clr-accent);
+  display: inline-block;
+  margin: .75em 0 .25em;
+  padding: .175em .5em;
+}
+
 .info-list li {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 50px 1fr;
 }
 
 .info-icon {
@@ -103,6 +124,7 @@ img {
   border-radius: 5px;
   display: inline-block;
   text-align: center;
+  margin: 1em;
 }
 
 .intro-img {
@@ -177,9 +199,10 @@ img {
   height: 50px;
   font-size: var(--fs-body);
   margin-bottom: 2em;
+  color: var(--clr-light);
+  background: var(--clr-dark);
+  border: none;
 }
-
-
 
 .btn {
   align-self: center;
@@ -204,6 +227,9 @@ footer p {
 .container {
   text-align: center;
 }
+.skill-div, .background-div {
+  text-align: left;
+}
 /* Element positioning */
 .nav-bar {
   display: flex;
@@ -220,6 +246,7 @@ footer p {
 .content-container{
   margin: 0 auto 0;
   padding: 2em 2em 5em;
+  display: inline-block;
 }
 
 .form-container form{
@@ -286,4 +313,56 @@ footer p {
   .links-container {
     display: block;
   }
+}
+
+@media (min-width: 600px) {
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+    "info info"
+    "skill background"
+    ;
+  }
+  .info-div {
+    grid-area: info;
+    position: relative;
+    z-index: 2;
+  }
+
+  .skill-div {
+    grid-row: -1/1;
+    grid-column: 1/2;
+    padding-top: 450px;
+  }
+
+  .education-list li{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-div {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas: 
+    "title gap"
+    "list img";
+    grid-gap: 1em;
+    border: 12.5px solid var(--clr-dark);
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+  .info-list {
+    grid-area: list;
+  }
+
+  .portfolio-img {
+    max-width: 250px;
+    grid-area: img;
+    margin: 0 auto ;
+    position: relative;
+    top: -30px;
+  }
+
 }

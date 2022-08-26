@@ -50,4 +50,3 @@ blogsList.forEach(list => content += `
 `)
 
 blogs.innerHTML = `${content}`;
-console.log(content)
